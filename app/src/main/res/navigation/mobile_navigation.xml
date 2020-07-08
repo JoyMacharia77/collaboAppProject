@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_my_tasks">
+
+    <fragment
+        android:id="@+id/nav_my_tasks"
+        android:name="com.joymacharia.collaboapp.ui.myTasks.MyTasksFragment"
+        android:label="@string/my_tasks"
+        tools:layout="@layout/fragment_my_tasks">
+
+        <action
+            android:id="@+id/action_HomeFragment_to_HomeSecondFragment"
+            app:destination="@id/nav_home_second" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_home_second"
+        android:name="com.joymacharia.collaboapp.ui.myTasks.HomeSecondFragment"
+        android:label="@string/home_second"
+        tools:layout="@layout/fragment_home_second">
+        <action
+            android:id="@+id/action_HomeSecondFragment_to_HomeFragment"
+            app:destination="@id/nav_my_tasks" />
+
+        <argument
+            android:name="myArg"
+            app:argType="string" />
+    </fragment>
+
+   <!--<fragment
+        android:id="@+id/nav_chat"
+        android:name="com.joymacharia.collaboapp.ui.chat.ChatFragment"
+        android:label="Chat"
+        tools:layout="@layout/fragment_chat" />-->
+   <activity
+        android:id="@+id/nav_chat"
+        android:label="@string/chat"
+        android:name="com.joymacharia.collaboapp.ChatActivity"
+        tools:layout="@layout/activity_chat"/>
+
+    <fragment
+        android:id="@+id/nav_profile"
+        android:name="com.joymacharia.collaboapp.ui.profile.ProfileFragment"
+        android:label="@string/my_profile"
+        tools:layout="@layout/fragment_profile" />
+</navigation>

@@ -1,0 +1,66 @@
+<resources>
+    <string name="app_name">collabo App</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">User Name</string>
+    <string name="nav_header_subtitle">User Email</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_gallery">Gallery</string>
+    <string name="menu_slideshow">Slideshow</string>
+
+    <string name="home_second">Home Second</string>
+    <string name="my_tasks">My Tasks</string>
+    <string name="chat">Chat</string>
+    <string name="my_profile">My Profile</string>
+    <string name="others">OTHERS</string>
+    <string name="contact_us">Contact Us</string>
+    <string name="about_us">About Us</string>
+    <string name="share_app">Share App</string>
+    <string name="logout">Logout</string>
+    <string name="tab_layout_1">View Tasks</string>
+    <string name="tab_layout_2">Add Task</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="task_image">task image</string>
+    <string name="add_a_new_task">ADD A NEW TASK</string>
+    <string name="enter_new_task">Enter New Task:</string>
+    <string name="set_deadline">Set Deadline:</string>
+    <string name="add">ADD</string>
+    <string name="edit">Edit</string>
+    <string name="delete">Delete</string>
+    <string name="enter_your_name">Enter your name</string>
+    <string name="enter_username">Enter Username</string>
+    <string name="join_chat">Join Chat</string>
+    <string name="chat_header">Send and Receive Messages From Your Teammates</string>
+    <string name="enter_message">Enter Message...</string>
+    <string name="send">SEND</string>
+    <string name="name">Name</string>
+
+
+    <string-array name="task_images">
+        <item>@drawable/task</item>
+        <item>@drawable/task</item>
+        <item>@drawable/task</item>
+        <item>@drawable/task</item>
+        <item>@drawable/task</item>
+    </string-array>
+
+    <string-array name="task_titles">
+        <item>TASK 1</item>
+        <item>TASK 2</item>
+        <item>TASK 3</item>
+        <item>TASK 4</item>
+        <item>TASK 5</item>
+    </string-array>
+    <string-array name="task_deadlines">
+        <item>TASK 1 DEADLINE</item>
+        <item>TASK 2 DEADLINE</item>
+        <item>TASK 3 DEADLINE</item>
+        <item>TASK 4 DEADLINE</item>
+        <item>TASK 5 DEADLINE</item>
+    </string-array>
+</resources>

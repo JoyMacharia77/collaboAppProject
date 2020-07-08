@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".AddTaskFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <ImageView
+        android:id ="@+id/task_logo"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:src="@drawable/task"
+        android:layout_centerHorizontal="true"
+        android:contentDescription="@string/task_image"
+        />
+
+    <TextView
+        android:id ="@+id/add_task"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/add_a_new_task"
+        android:textStyle="bold"
+        android:layout_below="@id/task_logo"
+        android:layout_marginTop="24dp"
+        android:textSize="24sp"
+        android:textColor="@color/my_black"
+        android:layout_centerHorizontal="true"
+        />
+
+    <TextView
+        android:id ="@+id/enter_task"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginLeft="24dp"
+        android:text="@string/enter_new_task"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_marginTop="50dp"
+        android:layout_below="@id/add_task"
+        android:drawableStart="@drawable/ic_add_circle"
+        android:drawableLeft="@drawable/ic_add_circle" />
+    <EditText
+        android:id="@+id/task"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/my_black"
+        android:inputType="textMultiLine"
+        android:minLines="2"
+        android:maxLines="3"
+        android:scrollbars="vertical"
+        android:layout_below="@id/add_task"
+        android:layout_marginTop="40dp"
+        android:layout_toEndOf="@id/enter_task"
+        android:layout_toRightOf="@id/enter_task" />
+    <TextView
+        android:id ="@+id/enter_deadline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginLeft="24dp"
+        android:text="@string/set_deadline"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_marginTop="80dp"
+        android:layout_below="@id/enter_task"
+        android:drawableStart="@drawable/ic_calendar"
+        android:drawableLeft="@drawable/ic_calendar" />
+    <EditText
+        android:id="@+id/deadline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:layout_below="@id/enter_task"
+        android:layout_marginTop="80dp"
+        android:layout_toEndOf="@id/enter_deadline"
+        android:layout_toRightOf="@id/enter_deadline"
+        android:textColor="@color/my_black"
+        android:onClick="setDeadline"
+         />
+    <Button
+        android:id="@+id/add_btn"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/enter_deadline"
+        android:text="@string/add"
+        android:textAllCaps="true"
+        android:layout_marginTop="80dp"
+        android:textColor="@color/colorPrimary"
+        android:layout_centerHorizontal="true"
+        />
+</RelativeLayout>

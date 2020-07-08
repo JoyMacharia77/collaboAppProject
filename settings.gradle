@@ -1,0 +1,2 @@
+rootProject.name='collabo App'
+include ':app'
