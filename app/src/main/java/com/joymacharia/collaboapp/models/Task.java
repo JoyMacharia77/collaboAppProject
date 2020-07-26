@@ -2,7 +2,7 @@ package com.joymacharia.collaboapp.models;
 
 public class Task {
     private int id;
-    private  int taskImage;
+//    private  int taskImage;
     private String taskTitle;
     private String taskDeadline;
     private String task,date;
@@ -15,16 +15,17 @@ public class Task {
     /*Create a constructor for the recipe data model
      * Pass the parameters recipeImage, recipeTitle and recipeDescription*/
 
-    public Task(int taskImage, String taskTitle, String taskDeadline)// String recipeIngredients)
+    public Task(String taskTitle,String task, String taskDeadline,String date)// String recipeIngredients)
     {
-        this.taskImage = taskImage;
+        this.task= task;
+        this.date= date;
         this.taskTitle = taskTitle;
         this.taskDeadline = taskDeadline;
 
     }
     /* Create the getters and return the specific object*/
 
-    public int getTaskImage(){ return  taskImage;}
+
     public String getTaskTitle()
     {
         return taskTitle;
@@ -56,7 +57,10 @@ public class Task {
     public void setDate(String date) {
         this.date = date;
     }
+    public void setTaskDeadline(String taskDeadline){
+        this.taskDeadline= taskDeadline;
 
+    }
     public User getUser() {
         return user;
     }
