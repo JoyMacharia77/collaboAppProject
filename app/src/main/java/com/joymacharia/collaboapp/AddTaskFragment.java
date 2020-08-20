@@ -65,7 +65,7 @@ public class AddTaskFragment extends Fragment {
     }
 
     private void init() {
-        deadline = view.findViewById(R.id.deadline);
+       ///////////////////////// deadline = view.findViewById(R.id.deadline);
         task = view.findViewById(R.id.task);
         addbtn = view.findViewById(R.id.add_btn);
         dialog = new ProgressDialog(getContext());
@@ -90,7 +90,7 @@ public class AddTaskFragment extends Fragment {
 
     public void addTask(){
         final String  addTask = task.getText().toString();
-        final String deadlin = deadline.getText().toString();
+       /////////////////////// final String deadlin = deadline.getText().toString();
 //        final String taskTitle =
         dialog.setMessage("adding new task");
         dialog.show();
@@ -114,9 +114,10 @@ public class AddTaskFragment extends Fragment {
                             u.setId(user.getInt("id"));
                             t.setUser(u);
                             t.setId(task.getInt("id"));
-                            t.setTask(task.getString("task"));
-                            t.setDate(task.getString("created_at"));
-                            t.setTaskDeadline(task.getString("deadline"));
+                            t.setTaskTitle(task.getString("task"));
+                            /////////////////////////
+                            //t.setDate(task.getString("created_at"));
+                          ////////  t.setTaskDeadline(task.getString("deadline"));
 
 
                             list.add(0, t);
@@ -151,7 +152,7 @@ public class AddTaskFragment extends Fragment {
                     HashMap<String, String> map = new HashMap<>();
                     map.put("task",addTask);
 //                    map.put("taskTitle",taskTitle);
-                    map.put("deadline",deadlin);
+                ////////////////////////////    map.put("deadline",deadlin);
                     return map;
                 }
 

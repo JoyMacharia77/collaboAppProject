@@ -55,15 +55,51 @@ public class ViewTasksFragment extends Fragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater,@Nullable ViewGroup container,
                              @Nullable Bundle savedInstanceState) {
-        rootView = inflater.inflate(R.layout.fragment_view_tasks, container, false);
-        init();
+      /////////////////  View  rootView = inflater.inflate(R.layout.fragment_view_tasks, container, false);
+            rootView = inflater.inflate(R.layout.fragment_view_tasks, container, false);
+
+    ///////////////////
+        //init();
+    taskRecyclerView = rootView.findViewById(R.id.recycler_tasks);
+    taskRecyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
+    list = new ArrayList<>();
+    //////////////////////
+    //taskAdapter = new TaskAdapter(getContext(), list);
+    taskAdapter = new TaskAdapter(list, getContext());
+    taskRecyclerView.setAdapter(taskAdapter);
+
+//        initializeData();
+    getTasks();
+    //Implement Swiping and moving of Card Items
+    ItemTouchHelper helper= new ItemTouchHelper(new ItemTouchHelper.SimpleCallback(ItemTouchHelper.RIGHT|ItemTouchHelper.LEFT|ItemTouchHelper.DOWN|ItemTouchHelper.UP, ItemTouchHelper.LEFT|ItemTouchHelper.RIGHT) {
+        @Override
+        public boolean onMove(@NonNull RecyclerView recyclerView, @NonNull RecyclerView.ViewHolder viewHolder, @NonNull RecyclerView.ViewHolder target) {
+            int from = viewHolder.getAdapterPosition();
+            int to= viewHolder.getAdapterPosition();
+            Collections.swap(list,from,to);
+            taskAdapter.notifyItemMoved(from,to);
+
+            return true;
+        }
+
+        @Override
+        public void onSwiped(@NonNull RecyclerView.ViewHolder viewHolder, int direction) {
+            list.remove(viewHolder.getAdapterPosition());
+            taskAdapter.notifyItemRemoved(viewHolder.getAdapterPosition());
+        }
+    });
+    helper.attachToRecyclerView(taskRecyclerView);
         return rootView;
     }
+    ////////////////////////////////
+    /*
     private void init(){
         taskRecyclerView = rootView.findViewById(R.id.recycler_tasks);
         taskRecyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
         list = new ArrayList<>();
-        taskAdapter = new TaskAdapter(getContext(), list);
+        //////////////////////
+        //taskAdapter = new TaskAdapter(getContext(), list);
+        taskAdapter = new TaskAdapter(list, getContext());
         taskRecyclerView.setAdapter(taskAdapter);
 
 //        initializeData();
@@ -88,6 +124,8 @@ public class ViewTasksFragment extends Fragment {
         });
         helper.attachToRecyclerView(taskRecyclerView);
     }
+    */
+
 
 //    private void initializeData()
 //    {
@@ -124,14 +162,17 @@ public class ViewTasksFragment extends Fragment {
                         Task mTask = new Task();
                         mTask.setId(taskObject.getInt("id"));
                         mTask.setUser(mUser);
-                        mTask.setDate(taskObject.getString("created_at"));
-                        mTask.setTask(taskObject.getString("task"));
+                        /////////////////////
+                        //mTask.setDate(taskObject.getString("created_at"));
+                        //mTask.setTask(taskObject.getString("task"));
                         mTask.setTaskDeadline(taskObject.getString("deadline"));
                         list.add(mTask);
 
                     }
                 }
-                taskAdapter = new TaskAdapter(getContext(), list);
+                ///////////
+               // taskAdapter = new TaskAdapter(getContext(), list);
+                taskAdapter = new TaskAdapter(list, getContext());
                 taskRecyclerView.setAdapter(taskAdapter);
 
             }catch (JSONException e){

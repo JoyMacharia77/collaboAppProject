@@ -156,7 +156,7 @@ public class signupFragment extends Fragment {
         dialog.setMessage("Registering");
         dialog.show();
 //        Toast.makeText(getContext(), "going to volley", Toast.LENGTH_SHORT).show();
-        String mURL = "http://192.168.8.105/api/register";
+        String mURL = "http://192.168.0.107/api/register";
 
         StringRequest request = new StringRequest(Request.Method.POST, mURL, new Response.Listener<String>() {
             @Override

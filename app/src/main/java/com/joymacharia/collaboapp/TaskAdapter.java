@@ -33,15 +33,17 @@ import java.util.Map;
 public class TaskAdapter extends RecyclerView.Adapter <TaskAdapter.ViewHolder> {
     private ArrayList<Task> taskData;
     private ArrayList<Task> listAll;
+    //private Context myContext;
     private Context context;
     private SharedPreferences preferences;
 
 //    TaskAdapter(ArrayList<Task> taskData,Context context)
 //    {
 //        this.myContext = context;
-//        this.taskData = taskData;
+//        this.taskData = taskData; }
 
-    public TaskAdapter(Context context, ArrayList<Task> taskData){
+    public TaskAdapter(ArrayList<Task> taskData, Context context)
+    {
         this.context = context;
         this.taskData = taskData;
         this.listAll = new ArrayList<>(taskData);
@@ -52,16 +54,20 @@ public class TaskAdapter extends RecyclerView.Adapter <TaskAdapter.ViewHolder> {
     @NonNull
     @Override
     public TaskAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.task_list_item, parent,false);
-        return new TaskAdapter.ViewHolder(view);
+        ///////////////////////////////
+        /*View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.task_list_item, parent,false);
+        return new TaskAdapter.ViewHolder(view);   */
+        return new ViewHolder(LayoutInflater.from(context).inflate(R.layout.task_list_item, parent,false));
     }
 
     @Override
     public void onBindViewHolder(@NonNull TaskAdapter.ViewHolder holder, int position) {
         Task task = taskData.get(position);
-        holder.myTaskDeadline.setText(task.getTaskDeadline());
-        holder.date.setText(task.getDate());
-        holder.task.setText(task.getTask());
+        ///////////////////////////
+       // holder.myTaskDeadline.setText(task.getTaskDeadline());
+        //holder.date.setText(task.getDate());
+        //holder.task.setText(task.getTask());
+        holder.myTaskTitle.setText(task.getTaskTitle());
 //        holder.myTaskTitle.setText(task.getTaskTitle());
 
 
@@ -71,6 +77,8 @@ public class TaskAdapter extends RecyclerView.Adapter <TaskAdapter.ViewHolder> {
 //            //something
 //        }
     }
+
+
         //deleting a task
         private void deleteTask(int taskId, int position){
             AlertDialog.Builder builder = new AlertDialog.Builder(context);
@@ -133,7 +141,9 @@ public class TaskAdapter extends RecyclerView.Adapter <TaskAdapter.ViewHolder> {
                     filteredList.addAll(listAll);
                 } else {
                     for (Task task : listAll){
-                        if(task.getTask().toLowerCase().contains(constraint.toString().toLowerCase())
+                        /////////////////////
+                       // if(task.getTask().toLowerCase().contains(constraint.toString().toLowerCase())
+                        if(task.getTaskTitle().toLowerCase().contains(constraint.toString().toLowerCase())
                                 || task.getUser().getUserName().toLowerCase().contains(constraint.toString().toLowerCase())){
                             filteredList.add(task);
                         }
@@ -168,7 +178,7 @@ public class TaskAdapter extends RecyclerView.Adapter <TaskAdapter.ViewHolder> {
 
     public class ViewHolder extends RecyclerView.ViewHolder {
 
-//        private ImageView myTaskImage;
+        private ImageView myTaskImage;
         private TextView myTaskTitle;
         private TextView myTaskDeadline;
         private TextView date;
@@ -177,10 +187,10 @@ public class TaskAdapter extends RecyclerView.Adapter <TaskAdapter.ViewHolder> {
 
         public ViewHolder(@NonNull final View itemView) {
             super(itemView);
-//            myTaskImage = itemView.findViewById(R.id.task_image);
-//            myTaskTitle = itemView.findViewById(R.id.task_title);
+            myTaskImage = itemView.findViewById(R.id.task_image);
+            myTaskTitle = itemView.findViewById(R.id.task_title);
             myTaskDeadline = itemView.findViewById(R.id.task_deadline);
-            task = itemView.findViewById(R.id.task);
+            //task = itemView.findViewById(R.id.task);
             date = itemView.findViewById(R.id.task_date_created);
 
             //onclick of items
@@ -198,11 +208,15 @@ public class TaskAdapter extends RecyclerView.Adapter <TaskAdapter.ViewHolder> {
 
         public void bindTo(Task currentTask)
         {
-//            Glide.with(context).load(currentTask.getTaskImage()).into(myTaskImage);
+           Glide.with(context).load(currentTask.getTaskImage()).into(myTaskImage);
             myTaskTitle.setText(currentTask.getTaskTitle());
             myTaskDeadline.setText(currentTask.getTaskDeadline());
+            ///////////////////////////
+            /*
             task.setText(currentTask.getTask());
             date.setText(currentTask.getDate());
+            */
+
         }
     }
 }
