@@ -31,6 +31,7 @@ import com.google.android.material.textfield.TextInputLayout;
 import com.joymacharia.collaboapp.AuthActivity;
 import com.joymacharia.collaboapp.R;
 import com.joymacharia.collaboapp.UserInfoActivity;
+import com.joymacharia.collaboapp.constants;
 ;
 
 import org.json.JSONException;
@@ -156,9 +157,9 @@ public class signupFragment extends Fragment {
         dialog.setMessage("Registering");
         dialog.show();
 //        Toast.makeText(getContext(), "going to volley", Toast.LENGTH_SHORT).show();
-        String mURL = "http://192.168.0.107/api/register";
+        String mURL = "http://192.168.8.105/api/register";
 
-        StringRequest request = new StringRequest(Request.Method.POST, mURL, new Response.Listener<String>() {
+        StringRequest request = new StringRequest(Request.Method.POST, constants.REGISTER, new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
                 Log.w("res", "Response:" + response);

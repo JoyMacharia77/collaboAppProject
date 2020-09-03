@@ -51,4 +51,9 @@
         android:name="com.joymacharia.collaboapp.ui.profile.ProfileFragment"
         android:label="@string/my_profile"
         tools:layout="@layout/fragment_profile" />
+    <fragment
+        android:id="@+id/nav_account"
+        android:name="com.joymacharia.collaboapp.Fragments.AccountFragment"
+        android:label="logout"
+        tools:layout="@layout/layout_account" />
 </navigation>
