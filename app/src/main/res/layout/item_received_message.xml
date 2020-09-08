@@ -15,7 +15,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/nameTxt"
-        android:background="@color/colorAccent"
+        android:background="@drawable/message_bubble_received"
         android:textColor="@color/my_white"
         android:padding="8dp"
         android:layout_marginEnd="64dp"

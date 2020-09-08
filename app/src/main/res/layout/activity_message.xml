@@ -4,12 +4,27 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/msgbackgd2"
     tools:context=".MessageActivity">
+
+    <TextView
+        android:id="@+id/chatTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/chat_caps"
+        android:textColor="@color/colorPrimaryDark"
+        android:background="@color/my_white"
+        android:textStyle="bold"
+        android:textSize="30dp"
+        android:drawableStart="@drawable/ic_chat_blue"
+        android:drawableLeft="@drawable/ic_chat_blue"
+        android:layout_centerHorizontal="true"/>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/messageRecyclerView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_below="@id/chatTitle"
         android:layout_above="@id/messageEdit"/>
     <EditText
         android:id="@+id/messageEdit"
@@ -20,6 +35,7 @@
         android:hint="@string/enter_message"
         android:layout_toStartOf="@id/sendMsg"
         android:textSize="16sp"
+        android:textColor="@color/my_white"
         android:layout_alignParentBottom="true"
         android:layout_marginLeft="16dp"
         android:layout_marginStart="16dp"
@@ -50,7 +66,5 @@
         android:layout_marginBottom="16dp"
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true" />
-
-
 
 </RelativeLayout>

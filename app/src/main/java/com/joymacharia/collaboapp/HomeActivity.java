@@ -102,15 +102,22 @@ public class HomeActivity extends AppCompatActivity {
         startActivity(myAboutIntent);
     }
 
-    public void share(MenuItem item) 
+    public void share(MenuItem item)
     {
-        Intent sendIntent = new Intent();
-        sendIntent.setAction(Intent.ACTION_SEND);
-        //sendIntent.putExtra(Intent.EXTRA_TEXT,editText.getText().toString());
-        sendIntent.setType("text/plain");
-        Intent.createChooser(sendIntent,"Share via");
-        startActivity(sendIntent);
+        Intent shareIntent = new Intent(Intent.ACTION_SEND);
+        shareIntent.setType("text/plain");
+        shareIntent.putExtra(Intent.EXTRA_TEXT, "SHARE APP");
+        Intent chooser = Intent.createChooser(shareIntent, "Share via");
+        if(shareIntent.resolveActivity(getPackageManager()) !=null)
+        {
+            startActivity(chooser);
+        }
+    }
 
+    public void redirectHome(View view)
+    {
+        Intent home = new Intent(HomeActivity.this, NewAddTaskFragment.class);
+        startActivity(home);
     }
 
     /*

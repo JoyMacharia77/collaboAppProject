@@ -7,6 +7,8 @@ import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentStatePagerAdapter;
 
 import com.joymacharia.collaboapp.AddTaskFragment;
+import com.joymacharia.collaboapp.NewAddTaskFragment;
+import com.joymacharia.collaboapp.TimerFragment;
 import com.joymacharia.collaboapp.ViewTasksFragment;
 
 
@@ -23,8 +25,8 @@ public class PagerAdapter extends FragmentStatePagerAdapter {
     public Fragment getItem(int position) {
         switch (position)
         {
-            case 0: return new ViewTasksFragment();
-            case 1: return new AddTaskFragment();
+            case 0: return new NewAddTaskFragment();
+            case 1: return new TimerFragment();
             default:return  null;
         }
     }

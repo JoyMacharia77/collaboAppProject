@@ -12,14 +12,19 @@
             android:id="@+id/nav_chat"
             android:icon="@drawable/ic_chat"
             android:title="@string/chat" />
-        <item
-            android:id="@+id/nav_profile"
-            android:icon="@drawable/ic_profile"
-            android:title="@string/my_profile" />
-        <item
+        <!--<item
             android:id="@+id/nav_account"
             android:icon="@drawable/ic_logout"
-            android:title="account" />
+            android:title="account" />-->
+        <item
+            android:id="@+id/nav_account"
+            android:icon="@drawable/ic_profile"
+            android:title="@string/my_account" />
+
+        <!--<item
+            android:id="@+id/nav_profile"
+            android:icon="@drawable/ic_profile"
+            android:title="@string/my_profile" />-->
 
     </group>
 
@@ -40,10 +45,10 @@
                 android:icon="@drawable/ic_share"
                 android:onClick="share"
                 android:title="@string/share_app" />
-            <item
+           <!-- <item
                 android:id="@+id/nav_logout"
                 android:icon="@drawable/ic_logout"
-                android:title="@string/logout" />
+                android:title="@string/logout" /> -->
         </menu>
     </item>
 </menu>
