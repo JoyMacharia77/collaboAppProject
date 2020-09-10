@@ -25,7 +25,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         app:lottie_loop="true"
-        app:lottie_fileName="teamwork2.json"
+        app:lottie_fileName="current.json"
         app:lottie_autoPlay="true"
         />
 

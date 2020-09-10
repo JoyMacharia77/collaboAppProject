@@ -42,14 +42,14 @@ public class EditUserInfoActivity  extends AppCompatActivity{
     private TextInputLayout layoutName,layoutLastname;
     private TextInputEditText txtName,txtLastname;
     private TextView txtSelectPhoto;
-    private Button btnSave;
+    private Button btnSave,btnContinue;
     private CircleImageView circleImageView;
     private static final int GALLERY_CHANGE_PROFILE = 5;
     private Bitmap bitmap = null;
     private SharedPreferences userPref;
     private ProgressDialog dialog;
 
-    @Override
+     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_edit_user_info);
@@ -107,7 +107,8 @@ public class EditUserInfoActivity  extends AppCompatActivity{
                         editor.putString("lastname", txtLastname.getText().toString().trim());
                         editor.apply();
                         Toast.makeText(EditUserInfoActivity.this, "Profile Updated", Toast.LENGTH_SHORT).show();
-                        EditUserInfoActivity.this.finish();
+//                        EditUserInfoActivity.this.finish();
+                        startActivity(new Intent(EditUserInfoActivity.this, HomeActivity.class));
                     }
                 } catch (JSONException e) {
                     e.printStackTrace();
