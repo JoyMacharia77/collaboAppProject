@@ -47,14 +47,13 @@
         tools:layout="@layout/activity_chat" />
 
     <fragment
-        android:id="@+id/nav_profile"
-        android:name="com.joymacharia.collaboapp.ui.profile.ProfileFragment"
-        android:label="@string/my_profile"
-        tools:layout="@layout/fragment_profile" />
-
-    <fragment
         android:id="@+id/nav_account"
         android:name="com.joymacharia.collaboapp.Fragments.AccountFragment"
-        android:label="My Account"
+        android:label="profile"
         tools:layout="@layout/layout_account" />
 </navigation>
+    <!--    <fragment-->
+    <!--        android:id="@+id/nav_profile"-->
+    <!--        android:name="com.joymacharia.collaboapp.ui.profile.ProfileFragment"-->
+    <!--        android:label="@string/my_profile"-->
+    <!--        tools:layout="@layout/fragment_profile" />-->
