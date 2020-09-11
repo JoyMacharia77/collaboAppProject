@@ -1,5 +1,12 @@
 <resources>
-    <string name="app_name">collabo App</string>
+    <string name="app_name">CollaboApp</string>
+    <string name="organisation">Organisation</string>
+    <string name="my_teams">My Teams</string>
+    <string name="already_have_an_account">Already have an Account?</string>
+    <string name="collabo_app">Collabo App</string>
+    <!-- TODO: Remove or change this placeholder text -->
+
+
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="nav_header_title">User Name</string>
@@ -27,8 +34,8 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="task_image">task image</string>
     <string name="add_a_new_task">ADD A NEW TASK</string>
-    <string name="enter_new_task">Enter New Task:</string>
-    <string name="set_deadline">Set Deadline:</string>
+    <string name="enter_new_task">Enter New Task</string>
+    <string name="set_deadline">Set Deadline</string>
     <string name="add">ADD</string>
     <string name="edit">Edit</string>
     <string name="delete">Delete</string>
@@ -39,6 +46,29 @@
     <string name="enter_message">Enter Message...</string>
     <string name="send">SEND</string>
     <string name="name">Name</string>
+    <string name="chat_caps">CHAT</string>
+    <string name="my_account">My Account</string>
+    <string name="logout_caps">LOGOUT</string>
+
+    <string name="add_caps">ADD</string>
+    <string name="view_tasks_caps">VIEW TASKS</string>
+    <string name="new_tasks">NEW TASKS</string>
+    <string name="task">TASK</string>
+    <string name="add_new_task">Add New Task</string>
+    <string name="add_a_new_task_caps">ADD A NEW TASK</string>
+    <string name="edit_task">Edit Task</string>
+    <string name="new_tab_layout_1">My Tasks</string>
+    <string name="new_tab_layout_2">Task Timer</string>
+    <string name="view_all_tasks">View all tasks</string>
+    <string name="start">START</string>
+    <string name="stop">STOP</string>
+    <string name="reset">RESET</string>
+    <string name="default_time">00:00:00</string>
+    <string name="time">%d:%02d:%02d</string>
+    <string name="time_your_tasks_conveniently">Time Your Tasks Conveniently</string>
+    <string name="stopwatch">STOPWATCH</string>
+    <string name="time_how_long_it_takes_you_to_complete_a_task">time how long it takes you to complete a task =]</string>
+
 
 
     <string-array name="task_images">

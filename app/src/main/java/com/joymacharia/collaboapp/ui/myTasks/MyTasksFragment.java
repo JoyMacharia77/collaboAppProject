@@ -41,12 +41,12 @@ public class MyTasksFragment extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-       // Toolbar toolbar = view.findViewById(R.id.toolbar);
+       //Toolbar toolbar = view.findViewById(R.id.toolbar);
         //setSupportActionBar(toolbar);
         //Create an instance of tab layout and add the tabs
         TabLayout tabLayout = view.findViewById(R.id.tab_layout);
-        tabLayout.addTab(tabLayout.newTab().setText(R.string.tab_layout_1));
-        tabLayout.addTab(tabLayout.newTab().setText(R.string.tab_layout_2));
+        tabLayout.addTab(tabLayout.newTab().setText(R.string.new_tab_layout_1));
+        tabLayout.addTab(tabLayout.newTab().setText(R.string.new_tab_layout_2));
         //set the tab to fill the layout
         tabLayout.setTabGravity(TabLayout.GRAVITY_FILL);
         //use the pager adapter to manage screens

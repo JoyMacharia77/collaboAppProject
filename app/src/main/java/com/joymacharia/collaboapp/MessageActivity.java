@@ -129,6 +129,11 @@ public class MessageActivity extends AppCompatActivity implements TextWatcher {
                     e.printStackTrace();
                 }
             });
+            //MESSAGE NOTIFICATION
+            //Create the intent
+            Intent intent = new Intent(getBaseContext(), MessageService.class);
+            //start the service
+            startService(intent);
         }
     }
 

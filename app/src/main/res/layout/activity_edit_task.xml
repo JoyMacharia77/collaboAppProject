@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".EditTaskActivity">
+
+    <TextView
+        android:id="@+id/editTaskTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/edit_task"
+        android:textSize="20sp"
+        android:layout_centerHorizontal="true"
+        android:fontFamily="@font/alloyink"
+        android:textColor="@color/chill_purple"
+        android:layout_marginTop="20dp"
+        />
+    <ImageView
+        android:id="@+id/editTaskImage"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_below="@id/editTaskTitle"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="40dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:src="@drawable/ic_edit"
+        android:contentDescription="@string/task"
+       />
+
+    <EditText
+        android:id="@+id/editable_item"
+        android:textAlignment="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editTaskImage"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:textStyle="bold"
+        android:textColor="@color/my_black"
+        android:layout_marginRight="40dp"
+        android:layout_marginLeft="40dp"
+        android:layout_centerHorizontal="true"
+        android:gravity="center_horizontal" />
+
+    <LinearLayout
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:weightSum="100"
+        android:layout_below="@+id/editable_item"
+        >
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="DELETE"
+            android:id="@+id/btnDelete"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="40dp"
+            android:background="@color/myLightBlue"
+            android:text="SAVE"
+            android:layout_toRightOf="@+id/btnDelete"
+            android:id="@+id/btnSave"
+            android:layout_toEndOf="@+id/btnDelete"
+            android:layout_marginStart="40dp" />
+
+    </LinearLayout>
+
+</RelativeLayout>
