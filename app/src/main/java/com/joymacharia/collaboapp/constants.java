@@ -7,6 +7,7 @@ public class constants {
     public static final String REGISTER = HOME+"/register";
     public static final String LOGOUT = HOME+"/logout";
     public static final String  SAVE_USER_INFO  = HOME+"/save_user_info";
+    public static final String  GET_USER_INFO  = HOME+"/get_user_info";
     public static final String ADD_TASK = HOME+"/createTask";
     public static final String VIEW_TASK = HOME+"/AllTask";
     public static final String DELETE_TASK = HOME+"/deleteTask";

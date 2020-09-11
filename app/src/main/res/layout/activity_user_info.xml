@@ -4,98 +4,82 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".UserInfoActivity"
-    android:background="@color/serenity_general_background"
     android:padding="50dp"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    tools:context=".UserInfoActivity">
+
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textSize="30sp"
-        android:layout_marginTop="30dp"
-        android:text="User Info"
+        android:layout_marginBottom="30dp"
         android:gravity="center_horizontal"
-        />
+        android:text="User Info"/>
+
+
     <de.hdodenhof.circleimageview.CircleImageView
-        android:id="@+id/imgUserInfo"
         android:layout_width="120dp"
         android:layout_height="120dp"
         android:layout_gravity="center_horizontal"
-        android:src="@color/BlueGrotto"
-        app:civ_border_width="2dp"
-        app:civ_border_color="#FF000000"
-        android:layout_marginBottom="10dp"
-        />
-     <TextView
-         android:id="@+id/txtSelectPhoto"
-         android:layout_width="match_parent"
-         android:layout_height="wrap_content"
-         android:text="Select photo"
-         android:textColor="@color/midnightBlue"
-         android:gravity="center_horizontal"
-         android:textSize="16sp"
-         android:layout_marginBottom="20dp"/>
-    <com.google.android.material.textfield.TextInputLayout
+        android:src="@android:color/darker_gray"
+        android:id="@+id/imgUserInfo"
+        android:layout_marginBottom="10dp"/>
+
+    <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/LayoutName"
-        android:layout_marginBottom="6dp"
+        android:text="Select photo"
+        android:textColor="@color/colorPrimary"
+        android:gravity="center_horizontal"
+        android:id="@+id/txtSelectPhoto"
+        android:textSize="16sp"
+        android:layout_marginBottom="20dp"/>
 
-        >
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/txtName"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            android:padding="15dp"
-            android:background="@drawable/emailshape"
-            android:drawablePadding="10dp"
-            android:hint="First Name"
-            android:inputType="text"
-            android:textColor="@android:color/black"
-            android:textColorHint="@android:color/black"
-            android:textColorHighlight="@color/white"/>
-    </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/LayoutLastName"
+        android:id="@+id/txtLayoutNameUserInfo"
         android:layout_marginBottom="6dp"
-       >
+        android:layout_height="wrap_content">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/txtLastNameUserInfo"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            android:padding="15dp"
-            android:background="@drawable/emailshape"
-            android:drawablePadding="10dp"
-            android:hint="last Name"
+            android:id="@+id/txtNameUserInfo"
+            android:hint="Name"
             android:inputType="text"
-            android:textColor="@android:color/black"
-            android:textColorHint="@android:color/black"
-            android:textColorHighlight="@android:color/black"/>
+            android:textSize="15sp"/>
+
     </com.google.android.material.textfield.TextInputLayout>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:id="@+id/txtLayoutLastnameameUserInfo"
+        android:layout_marginBottom="30dp"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/txtLastnameUserInfo"
+            android:hint="Lastname"
+            android:inputType="text"
+            android:textSize="15sp"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
 
     <Button
-        android:id="@+id/btnContinue"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="42dp"
         android:text="Continue"
-        android:shadowColor="@android:color/transparent"
-        android:padding="15dp"
+        android:id="@+id/btnContinue"
+        android:background="@drawable/btn_round"
         android:textColor="@android:color/white"
-        android:layout_marginRight="10dp"
-        android:layout_marginLeft="10dp"
-        android:layout_marginBottom="10dp"
-        android:layout_marginTop="6dp"
-        android:textAllCaps="false"
-        android:background="@drawable/loginshape"/>
-
-
+        android:layout_marginBottom="70dp"
+        android:textSize="17dp"
+        android:textAllCaps="false"/>
 
 </LinearLayout>

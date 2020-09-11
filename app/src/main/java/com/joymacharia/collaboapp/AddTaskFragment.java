@@ -133,8 +133,8 @@ public class AddTaskFragment   extends Fragment   {
                          /*   NewViewTasksFragment f = new NewViewTasksFragment();
                            f.arrayList.add(0,t);
 
-                       NewViewTasksFragment.taskRecyclerView.getAdapter().notifyItemInserted(0);
-                            NewViewTasksFragment.taskRecyclerView.getAdapter().notifyDataSetChanged();
+                        NewViewTasksFragment.taskRecyclerView.getAdapter().notifyItemInserted(0);
+                        NewViewTasksFragment.taskRecyclerView.getAdapter().notifyDataSetChanged();
                          NewViewTasksFragment.taskRecyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
                             NewViewTasksFragment.taskRecyclerView.setHasFixedSize(true);
                            Toast.makeText(AddTaskFragment.this.getContext(),"posted",Toast.LENGTH_SHORT).show();

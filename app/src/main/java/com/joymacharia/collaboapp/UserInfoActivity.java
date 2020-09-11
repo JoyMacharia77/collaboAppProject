@@ -57,10 +57,10 @@ public class UserInfoActivity extends AppCompatActivity {
 
     private void init() {
         userPref = getApplicationContext().getSharedPreferences("user", Context.MODE_PRIVATE);
-        layoutLastName = findViewById(R.id.LayoutLastName);
-        layoutName = findViewById(R.id.LayoutName);
-        txtName = findViewById(R.id.txtName);
-        txtLastName = findViewById(R.id.txtLastNameUserInfo);
+        layoutLastName = findViewById(R.id.txtLayoutLastnameameUserInfo);
+        layoutName = findViewById(R.id.txtEditLayoutNameUserInfo);
+        txtName = findViewById(R.id.txtNameUserInfo);
+        txtLastName = findViewById(R.id.txtLastnameUserInfo);
         txtSelectPhoto = findViewById(R.id.txtSelectPhoto);
         btnContinue =findViewById(R.id.btnContinue);
         circleImageView = findViewById(R.id.imgUserInfo);
