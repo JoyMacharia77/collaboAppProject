@@ -35,9 +35,9 @@ public class ViewPagerAdapter  extends PagerAdapter {
             "Enjoy",
     };
     private String desc[] = {
-            "Collaborate and Interact well with your team members with one platform.",
+            "Collaborate and Interact well with your team members on one platform.",
             "Build and Create Projects with ease together with your teammates.",
-            "Enjoy ease of work and team collaboration all in one platform.",
+            "Enjoy ease of work and team collaboration all on one platform.",
     };
 
 

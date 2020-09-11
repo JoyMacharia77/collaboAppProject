@@ -10,7 +10,7 @@
         android:layout_width="400dp"
         android:layout_height="300dp"
         android:layout_marginTop="20dp"
-        android:src="@drawable/note_book"
+        android:src="@drawable/sec_not"
         android:layout_centerHorizontal="true"
         android:contentDescription="@string/task_image"
         />
@@ -33,7 +33,7 @@
             android:textStyle="bold"
             android:textSize="20sp"
             android:textColor="@color/my_white"
-            android:background="@color/myLightBlue"
+            android:background="@drawable/loginshape"
             />
         <Button
             android:id="@+id/btnView"
@@ -47,8 +47,8 @@
             android:textColor="@color/my_white"
             android:textSize="20sp"
             android:textStyle="bold"
-            android:background="@color/chill_purple"
             android:layout_below="@id/btnAdd"
+            android:background="@drawable/chill"
             />
 
     </RelativeLayout>
