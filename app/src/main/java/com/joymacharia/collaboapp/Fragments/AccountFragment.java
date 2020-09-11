@@ -131,7 +131,7 @@ public class AccountFragment  extends Fragment {
 
     private void logout() {
 
-        StringRequest request = new StringRequest(Request.Method.GET, constants.LOGOUT, new Response.Listener<String>() {
+        StringRequest request = new StringRequest(Request.Method.POST, constants.LOGOUT, new Response.Listener<String>() {
             @Override
             public void onResponse(String res) {
 
