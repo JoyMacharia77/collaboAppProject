@@ -35,9 +35,9 @@ public class ViewPagerAdapter  extends PagerAdapter {
             "Enjoy",
     };
     private String desc[] = {
-            "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor",
-            "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor",
-            "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor",
+            "Collaborate and Interact well with your team members with one platform.",
+            "Build and Create Projects with ease together with your teammates.",
+            "Enjoy ease of work and team collaboration all in one platform.",
     };
 
 

@@ -4,13 +4,16 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/serenity_general_background"
+    android:background="@color/white"
     tools:context=".onBoardActivity">
+
     <androidx.viewpager.widget.ViewPager
      android:layout_height="match_parent"
         android:layout_width="match_parent"
         android:id="@+id/view_pager" >
+
     </androidx.viewpager.widget.ViewPager>
+
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -21,7 +24,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Skip"
-        android:background="@color/cycan"
+        android:textColor="@color/white"
+        android:background="@color/BlueGrotto"
         android:id="@+id/btnLeft"
 />
 
@@ -36,8 +40,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Next"
+            android:textColor="@color/white"
             android:layout_alignParentRight="true"
-            android:background="@color/cycan"
+            android:background="@color/BlueGrotto"
             android:id="@+id/btnRight"
             />
     </RelativeLayout>
