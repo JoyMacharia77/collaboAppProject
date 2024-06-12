@@ -6,6 +6,7 @@ import android.app.Notification;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.net.Uri;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
@@ -17,6 +18,7 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.navigation.NavigationView;
 
+import androidx.annotation.RequiresApi;
 import androidx.core.app.ActivityCompat;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
@@ -28,7 +30,7 @@ import androidx.appcompat.widget.Toolbar;
 
 import java.util.Calendar;
 
-public class MainActivity extends AppCompatActivity {
+public class HomeActivity extends AppCompatActivity {
 
     private AppBarConfiguration mAppBarConfiguration;
 
@@ -47,6 +49,12 @@ public class MainActivity extends AppCompatActivity {
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
+        /* 3. Connect the edit text variable you created
+         *with the one specified in the layout for receiving the date value */
+        //////////////////////////deadline = findViewById(R.id.deadline);
+        //4. Connect the EditText variable with an onClickListener
+        //deadline.setOnClickListener(this);
+
         //CHAT
        if (ActivityCompat.checkSelfPermission(this, Manifest.permission.READ_EXTERNAL_STORAGE)
            != PackageManager.PERMISSION_GRANTED)
@@ -58,7 +66,7 @@ public class MainActivity extends AppCompatActivity {
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.
         mAppBarConfiguration = new AppBarConfiguration.Builder(
-                R.id.nav_my_tasks, R.id.nav_chat, R.id.nav_profile)
+                R.id.nav_my_tasks, R.id.nav_chat, R.id.nav_account)
                 .setDrawerLayout(drawer)
                 .build();
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
@@ -94,25 +102,49 @@ public class MainActivity extends AppCompatActivity {
         startActivity(myAboutIntent);
     }
 
-    public void share(MenuItem item) 
+    public void share(MenuItem item)
     {
-        Intent sendIntent = new Intent();
-        sendIntent.setAction(Intent.ACTION_SEND);
-        //sendIntent.putExtra(Intent.EXTRA_TEXT,editText.getText().toString());
-        sendIntent.setType("text/plain");
-        Intent.createChooser(sendIntent,"Share via");
-        startActivity(sendIntent);
-
+        Intent shareIntent = new Intent(Intent.ACTION_SEND);
+        shareIntent.setType("text/plain");
+        shareIntent.putExtra(Intent.EXTRA_TEXT, "SHARE APP");
+        Intent chooser = Intent.createChooser(shareIntent, "Share via");
+        if(shareIntent.resolveActivity(getPackageManager()) !=null)
+        {
+            startActivity(chooser);
+        }
     }
 
+    public void redirectHome(View view)
+    {
+        Intent home = new Intent(HomeActivity.this, NewAddTaskFragment.class);
+        startActivity(home);
+    }
+
+    /*
+    @RequiresApi(api = Build.VERSION_CODES.N)
     public void setDeadline(View view)
-    { /*
+    {
+        //6.2 Declare Calender to get current selected date
         final Calendar c= Calendar.getInstance();
         mYear = c.get(Calendar.YEAR);
         mMonth = c.get(Calendar.MONTH);
         mDay = c.get(Calendar.DAY_OF_MONTH);
         //6.3 Declare a date picker dialogue to pick selected date
-        final DatePickerDialog datePickerDialog = new DatePickerDialog(this, new DatePickerDialog.OnDateSetListener() {
+        final DatePickerDialog datePickerDialog = new DatePickerDialog(HomeActivity.this, new DatePickerDialog.OnDateSetListener() {
+            @Override
+            public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
+                deadline.setText(dayOfMonth + "-" + (month+1)+"-"+ year);
+            }
+        }
+                ,mYear,mMonth,mDay);
+        //6.5 show the date picker dialog
+        datePickerDialog.show();
+    }
+
+     */
+
+    /*
+    final DatePickerDialog datePickerDialog = new DatePickerDialog(this, new DatePickerDialog.OnDateSetListener() {
             @Override
             public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
                 //6.4 set the date on the editText variable
@@ -121,8 +153,30 @@ public class MainActivity extends AppCompatActivity {
         }
                 ,mYear,mMonth,mDay);
         //6.5 show the date picker dialog
-        datePickerDialog.show(); */
-    }
+        datePickerDialog.show();
+    }        */
+
+   /* public void setDeadline(View view)
+    {
+        final Calendar c= Calendar.getInstance();
+        mYear = c.get(Calendar.YEAR);
+        mMonth = c.get(Calendar.MONTH);
+        mDay = c.get(Calendar.DAY_OF_MONTH);
+        //Declare a date picker dialogue to pick selected date
+        final DatePickerDialog datePickerDialog = new DatePickerDialog(this, (view1, year, month, dayOfMonth) -> deadline.setText(dayOfMonth + "-" + (month+1)+"-"+ year)
+                ,mYear,mMonth,mDay);
+
+        /*final DatePickerDialog datePickerDialog = new DatePickerDialog(this, new DatePickerDialog.OnDateSetListener() {
+            @Override
+            public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
+                //6.4 set the date on the editText variable
+                deadline.setText(dayOfMonth + "-" + (month+1)+"-"+ year);
+            }
+        }
+                ,mYear,mMonth,mDay);
+        //6.5 show the date picker dialog
+        datePickerDialog.show();
+    }  */
 
 
     /*public void joinChat(View view)

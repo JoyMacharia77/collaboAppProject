@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TimerFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <TextView
+        android:id="@+id/taskTimer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="@string/time_your_tasks_conveniently"
+        android:fontFamily="@font/amsterdam"
+        android:textColor="@color/chill_purple"
+        android:textSize="15sp"
+        android:layout_centerHorizontal="true"
+        />
+    <ImageView
+        android:id ="@+id/task_logo"
+        android:layout_width="400dp"
+        android:layout_height="300dp"
+        android:layout_below="@id/taskTimer"
+        android:layout_marginTop="5dp"
+        android:src="@drawable/timer"
+        android:layout_centerHorizontal="true"
+        android:contentDescription="@string/task_image"
+        />
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/task_logo"
+        android:layout_marginTop="20dp"
+        >
+        <Button
+            android:id="@+id/btnStopWatch"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="70dp"
+            android:layout_marginStart="70dp"
+            android:layout_centerHorizontal="true"
+            android:text="@string/stopwatch"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:textColor="@color/my_white"
+            android:background="@drawable/loginshape"
+            />
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

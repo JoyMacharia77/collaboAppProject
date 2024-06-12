@@ -55,8 +55,8 @@
         android:layout_marginLeft="24dp"
         android:layout_marginEnd="24dp"
         android:text="@string/join_chat"
-        android:textColor="@color/my_white"
-        android:background="@color/colorPrimaryDark"
+        android:textColor="@android:color/white"
+        android:background="@drawable/loginshape"
         />
 
     <TextView

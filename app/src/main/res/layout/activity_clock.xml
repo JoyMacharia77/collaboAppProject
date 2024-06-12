@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom = "16dp"
+    android:paddingLeft="16dp"
+    android:paddingRight = "16dp"
+    android:paddingTop = "16dp"
+    android:background = "@drawable/timer_bgd"
+    tools:context=".ClockActivity">
+
+    <TextView
+        android:id="@+id/timerTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="@string/time_how_long_it_takes_you_to_complete_a_task"
+        android:textAllCaps="true"
+        android:textSize="30sp"
+        android:fontFamily="@font/alloyink"
+        android:textColor="@color/my_white"
+        android:textStyle="bold"
+        android:layout_centerHorizontal="true"
+        />
+
+    <TextView
+        android:id="@+id/time_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/timerTitle"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"
+        android:background="#4400BCD4"
+        android:text=" "
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="@android:color/white"
+        android:textSize="60sp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/start_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/time_view"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:background="@color/myPeach"
+        android:textColor="@color/my_white"
+        android:textStyle="bold"
+        android:onClick="onClickStart"
+        android:text="@string/start" />
+
+    <Button
+        android:id="@+id/stop_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/start_button"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:background="@color/myLightBlue"
+        android:textColor="@color/my_white"
+        android:textStyle="bold"
+        android:onClick="onClickStop"
+        android:text="@string/stop" />
+
+    <Button
+        android:id="@+id/reset_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/stop_button"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:background="@color/myPeach"
+        android:textColor="@color/my_white"
+        android:textStyle="bold"
+        android:onClick="onClickReset"
+        android:text="@string/reset" />
+
+
+
+
+</RelativeLayout>

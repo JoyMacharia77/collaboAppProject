@@ -34,7 +34,7 @@ public class MessageActivity extends AppCompatActivity implements TextWatcher {
     private String name;
     private WebSocket webSocket;
     //SERVER PATH HAS IP ADDRESS AND PORT NUMBER THAT SERVER IS RUNNING
-    private String SERVER_PATH = "ws://192.168.0.107:3000";
+    private String SERVER_PATH = "ws://192.168.43.49:3000";
     private EditText messageEdit;
     private RecyclerView recyclerView;
     private View sendBtn, pickImgBtn;
@@ -129,6 +129,11 @@ public class MessageActivity extends AppCompatActivity implements TextWatcher {
                     e.printStackTrace();
                 }
             });
+            //MESSAGE NOTIFICATION
+            //Create the intent
+            Intent intent = new Intent(getBaseContext(), MessageService.class);
+            //start the service
+            startService(intent);
         }
     }
 
